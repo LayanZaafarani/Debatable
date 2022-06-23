@@ -20,6 +20,7 @@ const addOrUpdateEndorsement = async function(debateId, userId, opinion){
         .returning('*');
 };
 
+// exports
 module.exports = {
     addOrUpdateEndorsement
 }

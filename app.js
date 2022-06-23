@@ -13,6 +13,10 @@ app.listen( 3001, ()=>{
     console.log("The app is listening on port 3001");
 });
 
-// add routes
+// Routes
+
+// debate route
 app.use('/debates', require('./routers/debateRoutes'));
-app.use('/debates/endorsements', require('./routers/endorsementRoutes'));
+
+// endorsement route
+app.use('/debates/debate', require('./routers/endorsementRoutes'));

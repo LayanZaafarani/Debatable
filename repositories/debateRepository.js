@@ -14,6 +14,27 @@ const addDebate = async function(debateData){
         .returning('*');
 };
 
+// update a debate
+const updateDebate = async function(debateId, updateData){
+    return knex('debates')
+        .where({
+            id: debateId,
+            isDeleted: false
+        })
+        .update(updateData)
+        .returning('*');
+};
+
+// delete a debate
+const markDebateAsDeleted = async function(debateId){
+    return knex('debates')
+        .where({id: debateId})
+        .update({isDeleted: true});
+}
+
+// exports
 module.exports = {
-    addDebate
+    addDebate,
+    updateDebate,
+    markDebateAsDeleted
 }

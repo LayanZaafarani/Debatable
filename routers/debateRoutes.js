@@ -6,7 +6,14 @@
 const debateServices = require('../services/debateServices');
 const Router = require('express').Router();
 
-// add debate router
+// add debate route
 Router.post('/', debateServices.addDebate);
 
+// update debate route
+Router.put('/debate/:debateId', debateServices.updateDebate);
+
+// delete debate route
+Router.delete('/debate/:debateId', debateServices.deleteDebate);
+
+// exports
 module.exports = Router;

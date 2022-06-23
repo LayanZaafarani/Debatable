@@ -5,8 +5,8 @@
 
 exports.up = async function(knex) {
 
-    // uuid 
-    await knex.raw('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
+  // uuid 
+  await knex.raw('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
 
   // Table users 
   return knex.schema

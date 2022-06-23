@@ -5,13 +5,17 @@
 
  const endorsementRepo = require('../repositories/endorsementRepository');
 
+ // add endorsement
  const addEndorsement = async function(req, res){
     // Get the data
     let data = req.body;
 
+    // Get debate ID
+    let {debateId} = req.params;
+
     try{
         // try adding the debate to the database.
-        const endorsement = await endorsementRepo.addOrUpdateEndorsement(data.debate_id, data.user_id, data.opinion);
+        const endorsement = await endorsementRepo.addOrUpdateEndorsement(debateId, data.user_id, data.opinion);
         // send response.
         await res.status(200).send(endorsement);
     }
@@ -21,6 +25,7 @@
     }
  };
 
+ // exports
  module.exports = {
     addEndorsement
 }

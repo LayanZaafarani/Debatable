@@ -6,7 +6,6 @@ exports.up = async function(knex) {
     // uuid 
     await knex.raw('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
 
-
     //Table debates
     return knex.schema
     .createTable('debates', function(table){
