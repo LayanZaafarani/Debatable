@@ -10,7 +10,6 @@ exports.up = async function(knex) {
     //Table debates
     return knex.schema
     .createTable('debates', function(table){
-
         //Attributes
         //ID
         table.uuid('id')

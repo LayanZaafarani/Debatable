@@ -15,3 +15,4 @@ app.listen( 3001, ()=>{
 
 // add routes
 app.use('/debates', require('./routers/debateRoutes'));
+app.use('/debates/endorsements', require('./routers/endorsementRoutes'));
