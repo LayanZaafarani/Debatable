@@ -15,5 +15,8 @@ Router.put('/debate/:debateId', debateServices.updateDebate);
 // delete debate route
 Router.delete('/debate/:debateId', debateServices.deleteDebate);
 
+// get debate, but first ready the order by
+Router.get('/',debateServices.parseOrderByForDebates, debateServices.getDebates);
+
 // exports
 module.exports = Router;
