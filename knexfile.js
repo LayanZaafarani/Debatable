@@ -1,3 +1,8 @@
+/**
+ * knexfile.js containts the database information
+ * Layan Zaafarani 6/2022
+ */
+
 // Update with your config settings.
 require('dotenv').config();
 

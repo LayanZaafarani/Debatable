@@ -34,6 +34,7 @@ const parseOrderBy = function(orderByString){
     });
 }
 
+// exports
 module.exports = {
     parseOrderBy
 }

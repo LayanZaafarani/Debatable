@@ -3,6 +3,7 @@
  * Layan Zaafarani 6/2022
  */
 
+// imports
  const endorsementRepo = require('../repositories/endorsementRepository');
 
  // add endorsement
@@ -15,7 +16,7 @@
 
     try{
         // try adding the debate to the database.
-        const endorsement = await endorsementRepo.addOrUpdateEndorsement(debateId, data.user_id, data.opinion);
+        const endorsement = await endorsementRepo.addOrUpdateEndorsement(debateId, req.user.id, data.opinion);
         // send response.
         await res.status(200).send(endorsement);
     }

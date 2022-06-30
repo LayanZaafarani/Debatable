@@ -3,8 +3,8 @@
  * Layan Zaafarani 6/2022
  */
 
-// for using knex
-const { orderBy } = require('lodash');
+// imports
+const {orderBy} = require('lodash');
 const knex = require('../knexHelper');
 
 // inserting debates into debates table

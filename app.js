@@ -1,4 +1,9 @@
-// Load express.
+/**
+ * app.js contains the debatable app.
+ * Layan Zaafarani 6/2022
+ */
+
+// imports
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -20,3 +25,11 @@ app.use('/debates', require('./routers/debateRoutes'));
 
 // endorsement route
 app.use('/debates/debate', require('./routers/endorsementRoutes'));
+
+// user route
+app.use('/users', require('./routers/userRoutes'));
+
+// exports
+module.exports = {
+    app
+}

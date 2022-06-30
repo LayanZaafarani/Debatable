@@ -3,7 +3,7 @@
  * Layan Zaafarani 6/2022
  */
 
-// for using knex
+// imports
 const knex = require('../knexHelper');
 
 // inserting debates into debates table

@@ -3,6 +3,7 @@
  * Layan Zaafarani 6/2022
  */
 
+// imports
 const debateRepo = require('../repositories/debateRepository');
 const helpers = require('../helpers/helper');
 
@@ -10,6 +11,7 @@ const helpers = require('../helpers/helper');
 const addDebate = async function(req, res){
     // get data from body
     let data = req.body;
+    data.user_id = req.user.id;
 
     try{
         // try adding the debate to the database.
@@ -88,6 +90,7 @@ const getDebates = async function(req, res){
     }
 }
 
+// ordering of debates 
 const parseOrderByForDebates = async function(req, res, next){
     // get order if sent by user
     const {orderBy} = req.query;
